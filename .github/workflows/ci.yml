@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   hello:
-    runs-on: ubunt
+    runs-on: ubuntu-latest
     steps:
       - run: echo "CI/CD is running successfully"
-      
