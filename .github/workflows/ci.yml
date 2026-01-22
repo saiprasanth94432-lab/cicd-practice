@@ -15,3 +15,6 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t myapp:latest .
+
+      - name: Run Docker container
+        run: docker run myapp:latest
