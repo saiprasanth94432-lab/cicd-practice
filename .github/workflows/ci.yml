@@ -1,9 +1,20 @@
-name: First Pipeline
+name: CI Pipeline
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "CI/CD is running successfully"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run echo command
+        run: echo "CI pipeline is working"
+
+      - name: Show files
+        run: ls -la
