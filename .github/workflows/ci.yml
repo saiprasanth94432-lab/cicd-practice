@@ -13,8 +13,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run echo command
-        run: echo "CI pipeline is working"
-
-      - name: Show files
-        run: ls -la
+      - name: Build Docker image
+        run: docker build -t myapp:latest .
